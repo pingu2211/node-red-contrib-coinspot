@@ -1,0 +1,32 @@
+{
+  "name": "node-red-contrib-coinspot",
+  "version": "0.0.1",
+  "description": "A Node Red Wrapper for the Coin Spot API ",
+  "main": "coinspot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "VK2BHA",
+  "license": "ISC",
+  "keywords": ["node-red", "Coin Spot"],
+  "node-red" : {
+    "nodes": {
+        "Config": "nodes/coinspot-config.js", 
+        "Latest": "nodes/coinspot-spot.js",
+        "Open Orders": "nodes/coinspot-open-orders.js",
+        "Deposit": "nodes/coinspot-deposit.js",
+        "Send": "nodes/coinspot-send.js",
+        "Quote Buy": "nodes/coinspot-quote-buy.js",
+        "Quote Sell": "nodes/coinspot-quote-sell.js",
+        "List Balances": "nodes/coinspot-list-balances.js",
+        "My Orders": "nodes/coinspot-my-orders.js",
+        "Buy": "nodes/coinspot-buy.js",
+        "Sell": "nodes/coinspot-sell.js"
+    }
+  },
+  "dependencies": {
+    "browser-request": "^0.3.3",
+    "coinspot": "^0.1.2",
+    "crypto-js": "^3.1.9-1"
+  }
+}

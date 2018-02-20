@@ -1,0 +1,47 @@
+<script type="text/javascript">
+    RED.nodes.registerType('Quote Sell',{
+        category: 'Coinspot',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            creds: {value:"",type:"coinspot-config",required:true},
+            cointype: {value:""},
+            amount:{value:0, validate:RED.validators.number()}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"Quote Sell";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="Quote Sell">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    
+    <div class="form-row">
+        <label for="node-input-coinspot-config"><i class="icon-tag"></i> API Key</label>
+        <select type="text" id="node-input-creds"></select>
+    </div>
+     <div class="form-row">
+            <label for="node-input-cointype"><i class="icon-tag"></i> Cointype</label>
+            <select id="node-input-cointype">
+                    <option value="BTC">BitCoin</option>
+                    <option value="LTC">LiteCoin</option>
+                    <option value="ETH">Etherium</option>
+            </select>
+    </div>
+    <div class="form-row">
+            <label for="node-input-amount"><i class="icon-tag"></i> Amount</label>
+            <input type="text" id="node-input-amount" placeholder="amount">
+        </div>   
+
+</script>
+
+<script type="text/x-red" data-help-name="Quote Sell">
+    <p> HELP TEXT </p>
+</script>

@@ -1,0 +1,23 @@
+<script type="text/javascript">
+    RED.nodes.registerType('coinspot-config',{
+        category: 'config',
+        defaults: {    
+            key: {value:"",required:true},
+            password:{value:"",required:true}   
+        },
+        label: function() {
+            return this.key;
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="coinspot-config">
+    <div class="form-row">
+        <label for="node-config-input-key"><i class="icon-bookmark"></i> Key</label>
+        <input type="text" id="node-config-input-key">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-password><i class="icon-bookmark"></i> Key</label>
+        <input type="text" id="node-config-input-password">
+    </div>
+</script>
